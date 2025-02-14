@@ -5,4 +5,5 @@
     <string name="horoscope">Horoscope</string>
     <string name="palmistry">Palmistry</string>
     <string name="luck">Luck</string>
+    <string name="nameApp">Horoscope App</string>
 </resources>
