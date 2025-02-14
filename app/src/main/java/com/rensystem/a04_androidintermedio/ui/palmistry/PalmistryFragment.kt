@@ -8,8 +8,9 @@ import android.view.ViewGroup
 import com.rensystem.a04_androidintermedio.R
 import com.rensystem.a04_androidintermedio.databinding.FragmentLuckBinding
 import com.rensystem.a04_androidintermedio.databinding.FragmentPalmistryBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class PalmistryFragment : Fragment() {
 
     private var _binding: FragmentPalmistryBinding? = null

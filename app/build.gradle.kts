@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("kotlin-kapt")
+    alias(libs.plugins.daggerhiltandroid)
 }
 
 android {
@@ -37,6 +39,11 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
+//    Si requiere una version especifica de JVM javaToolchains (pe. la 8)
+//    kotlin{
+//        jvmToolchain(8)
+//    }
 }
 
 dependencies {
@@ -48,6 +55,9 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.navigationfragment)
     implementation(libs.navigationui)
+    implementation(libs.daggerhiltandroid)
+    kapt(libs.daggerhiltcompiler)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
