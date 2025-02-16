@@ -21,13 +21,22 @@ android {
     }
 
     buildTypes {
-        release {
+        getByName("release") {
             isMinifyEnabled = false
+            isDebuggable = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            resValue("string" ,"renatoname" , "horoscap")
+            buildConfigField("String" , "BASE_URL" , "\"https://newastro-production.vercel.app/\"")
         }
+        getByName("debug") {
+            isDebuggable = true
+            resValue("string" ,"renatoname" , "[DEBUG] horoscap")
+            buildConfigField("String" , "BASE_URL" , "\"https://newastro.vercel.app/\"")
+        }
+
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -39,6 +48,8 @@ android {
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true
+
     }
 
 //    Si requiere una version especifica de JVM javaToolchains (pe. la 8)
