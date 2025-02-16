@@ -61,6 +61,7 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.retrofitgson) // Convertidor Gson para Retrofit
     implementation(libs.okhttp)
+    implementation(libs.logininterceptor)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

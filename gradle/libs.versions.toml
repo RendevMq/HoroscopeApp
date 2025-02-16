@@ -18,6 +18,8 @@ daggerhilt = "2.51.1"
 retrofit = "2.9.0"
 okhttp = "4.9.1"
 
+logininterceptor = "4.3.1"
+
 
 
 
@@ -43,6 +45,7 @@ daggerhiltcompiler= { group = "com.google.dagger",name = "hilt-compiler", versio
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 retrofitgson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
 okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+logininterceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "logininterceptor" }
 
 
 [plugins]
