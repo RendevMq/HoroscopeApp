@@ -7,22 +7,26 @@ import com.rensystem.a04_androidintermedio.R
 import com.rensystem.a04_androidintermedio.domain.model.HoroscopeInfo
 import com.rensystem.a04_androidintermedio.ui.horoscope.HoroscopeViewModel
 
-class HoroscopeAdapter (private var horoscopeList : List<HoroscopeInfo> = emptyList()) : RecyclerView.Adapter<HoroscopeViewHolder>() {
+class HoroscopeAdapter(
+    private var horoscopeList: List<HoroscopeInfo> = emptyList(),
+    private val onItemSelected: (HoroscopeInfo) -> Unit
+) : RecyclerView.Adapter<HoroscopeViewHolder>() {
 
-    fun updateList(horoscopeList : List<HoroscopeInfo>) {
+    fun updateList(horoscopeList: List<HoroscopeInfo>) {
         this.horoscopeList = horoscopeList
         notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HoroscopeViewHolder {
-        val layout = LayoutInflater.from(parent.context).inflate(R.layout.item_horoscope,parent,false)
+        val layout =
+            LayoutInflater.from(parent.context).inflate(R.layout.item_horoscope, parent, false)
         return HoroscopeViewHolder(layout)
     }
 
 
     override fun onBindViewHolder(viewHolder: HoroscopeViewHolder, position: Int) {
         val item = horoscopeList[position]
-        return viewHolder.bind(item)
+        return viewHolder.bind(item , onItemSelected)
     }
 
     override fun getItemCount() = horoscopeList.size

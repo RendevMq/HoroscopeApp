@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("kotlin-kapt")
     alias(libs.plugins.daggerhiltandroid)
+    alias(libs.plugins.navigationsafeargs)
 }
 
 android {
@@ -57,6 +58,9 @@ dependencies {
     implementation(libs.navigationui)
     implementation(libs.daggerhiltandroid)
     kapt(libs.daggerhiltcompiler)
+    implementation(libs.retrofit)
+    implementation(libs.retrofitgson) // Convertidor Gson para Retrofit
+    implementation(libs.okhttp)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
