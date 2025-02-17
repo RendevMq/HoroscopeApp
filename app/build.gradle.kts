@@ -73,6 +73,11 @@ dependencies {
     implementation(libs.retrofitgson) // Convertidor Gson para Retrofit
     implementation(libs.okhttp)
     implementation(libs.logininterceptor)
+    implementation(libs.cameracore)
+    implementation(libs.cameracamera2)
+    implementation(libs.cameralifecycle)
+    implementation(libs.cameraview)
+    implementation(libs.cameraextension)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

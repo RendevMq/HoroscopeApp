@@ -20,7 +20,7 @@ okhttp = "4.9.1"
 
 logininterceptor = "4.3.1"
 
-
+cameraverion = "1.2.3"
 
 
 [libraries]
@@ -47,6 +47,12 @@ retrofitgson = { group = "com.squareup.retrofit2", name = "converter-gson", vers
 okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
 logininterceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "logininterceptor" }
 
+#============LIB:  CAMERAIT ============#
+cameracore = { group = "androidx.camera", name = "camera-core", version.ref = "cameraverion" }
+cameracamera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "cameraverion" }
+cameralifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "cameraverion" }
+cameraview = { group = "androidx.camera", name = "camera-view", version.ref = "cameraverion" }
+cameraextension = { group = "androidx.camera", name = "camera-extensions", version.ref = "cameraverion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
