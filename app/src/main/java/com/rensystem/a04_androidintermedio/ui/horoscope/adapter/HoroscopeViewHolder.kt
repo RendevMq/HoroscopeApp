@@ -15,7 +15,6 @@ class HoroscopeViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         binding.ivHoroscope.setImageResource(horoscopeInfo.img)
         binding.tvTitleHoroscope.text = context.getString(horoscopeInfo.name)
 
-
         binding.parent.setOnClickListener {
             startRotationAnimation(
                 binding.ivHoroscope,

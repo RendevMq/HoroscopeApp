@@ -18,6 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.A04_androidIntermedio"
         tools:targetApi="31">
+
         <activity
             android:name=".ui.detail.HoroscopeDetailActivity"
             android:exported="false" />

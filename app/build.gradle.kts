@@ -17,7 +17,12 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.rensystem.a04_androidintermedio.CustomTestRunner"
+    }
+
+    packaging {
+        // Excluir los archivos conflictivos de los JARs que contienen META-INF/gradle/incremental.annotation.processors
+        resources.excludes.add("META-INF/gradle/incremental.annotation.processors")
     }
 
     buildTypes {
@@ -28,13 +33,13 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            resValue("string" ,"renatoname" , "horoscap")
-            buildConfigField("String" , "BASE_URL" , "\"https://newastro-production.vercel.app/\"")
+            resValue("string", "renatoname", "horoscap")
+            buildConfigField("String", "BASE_URL", "\"https://newastro-production.vercel.app/\"")
         }
         getByName("debug") {
             isDebuggable = true
-            resValue("string" ,"renatoname" , "[DEBUG] horoscap")
-            buildConfigField("String" , "BASE_URL" , "\"https://newastro.vercel.app/\"")
+            resValue("string", "renatoname", "[DEBUG] horoscap")
+            buildConfigField("String", "BASE_URL", "\"https://newastro.vercel.app/\"")
         }
 
     }
@@ -80,6 +85,14 @@ dependencies {
     implementation(libs.cameraextension)
 
     testImplementation(libs.junit)
+    testImplementation(libs.kotlintest.runner)
+    testImplementation(libs.mockk)
+
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.androidx.espresso.contrib)
+    androidTestImplementation(libs.androidx.espresso.intents)
+    androidTestImplementation(libs.daggerhilt.android.testing)
+    androidTestImplementation(libs.androidx.fragment.testing)
+    androidTestImplementation(libs.daggerhilt.android.compiler)
 }
